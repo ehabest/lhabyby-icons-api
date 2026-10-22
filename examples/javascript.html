@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LHabyby Icons API - JavaScript Example</title>
+    <style>
+        .icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .icon {
+            width: 100px;
+            text-align: center;
+        }
+
+        .icon img {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <h1>LHabyby Icons API</h1>
+    <p>Load multiple social logos from one JSON request.</p>
+
+    <div id="icons" class="icons"></div>
+    <p id="status">Loading icons...</p>
+
+    <script>
+        const names = "github,facebook,instagram,yahoo";
+
+        const apiUrl =
+            "https://l.habyby.net/logo.php?name=" +
+            names +
+            "&format=json";
+
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("HTTP " + response.status);
+                }
+
+                return response.json();
+            })
+            .then(data => {
+                if (!Array.isArray(data.icons)) {
+                    throw new Error(
+                        "The API response does not contain an icons array."
+                    );
+                }
+
+                const container = document.getElementById("icons");
+                container.replaceChildren();
+
+                data.icons.forEach(icon => {
+                    if (!icon.url || !icon.title) {
+                        return;
+                    }
+
+                    const item = document.createElement("div");
+                    item.className = "icon";
+
+                    const img = document.createElement("img");
+                    img.src = icon.url;
+                    img.alt = icon.title + " logo";
+                    img.loading = "lazy";
+
+                    const label = document.createElement("p");
+                    label.textContent = icon.title;
+
+                    item.append(img, label);
+                    container.appendChild(item);
+                });
+
+                document.getElementById("status").textContent =
+                    data.icons.length + " icon(s) returned.";
+
+                if (data.not_found?.length) {
+                    document.getElementById("status").textContent +=
+                        " Not found: " + data.not_found.join(", ");
+                }
+            })
+            .catch(error => {
+                document.getElementById("status").textContent =
+                    "Unable to load icons: " + error.message;
+            });
+    </script>
+</body>
+</html>
