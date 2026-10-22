@@ -488,7 +488,7 @@ $phpExample = str_replace('API_JSON_URL', $jsonUrl, $phpExample);
 <div class="container">
 
     <header>
-        <h1>LHabyby Icons API Tester</h1>
+        <h1><a href="https://l.habyby.net">LHabyby</a> Icons API Tester</h1>
         <p>Test and use social media SVG logos with HTML, CSS, JavaScript, JSON, and PHP.</p>
         <p>
             API:
@@ -773,7 +773,7 @@ if (isset($data['icons']) &amp;&amp; is_array($data['icons'])) {
     </section>
 
     <footer>
-        LHabyby Icons API Tester · SVG logo examples for developers
+        <a href="https://l.habyby.net">LHabyby</a> Icons API Tester · SVG logo examples for developers
     </footer>
 
 </div>
