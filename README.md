@@ -161,3 +161,48 @@ Website: https://ihab.habyby.net/
 ---
 
 **Note:** Available logos and supported response formats depend on the live API. Third-party logos may be subject to their respective owners' trademarks and usage requirements.
+
+---
+## Supported Icons
+
+The Habyby Icons API currently reports **186 icons**. Replace `{icon}` with a supported icon name to request its data.
+
+**Get the complete list:** [View all supported icons in JSON](https://l.habyby.net/logo.php?format=list)
+
+**Example:** `github`
+
+| Icon Name | SVG Image |
+|---|---|
+| `500px` | [View SVG](https://l.habyby.net/images/social/svg/500px-logo-transparent.svg) |
+| `adminltr` | [View SVG](https://l.habyby.net/images/social/svg/adminltr-logo-transparent.svg) |
+| `adobe-acrobat` | [View SVG](https://l.habyby.net/images/social/svg/adobe-acrobat-logo-transparent.svg) |
+| `ajax` | [View SVG](https://l.habyby.net/images/social/svg/ajax-logo-transparent.svg) |
+| `android-studio` | [View SVG](https://l.habyby.net/images/social/svg/android-studio-logo-transparent.svg) |
+| `angular` | [View SVG](https://l.habyby.net/images/social/svg/angular-logo-transparent.svg) |
+| `appletv` | [View SVG](https://l.habyby.net/images/social/svg/appletv-logo-transparent.svg) |
+| `aspnet` | [View SVG](https://l.habyby.net/images/social/svg/aspnet-logo-transparent.svg) |
+| `aws` | [View SVG](https://l.habyby.net/images/social/svg/aws-logo-transparent.svg) |
+| `azure` | [View SVG](https://l.habyby.net/images/social/svg/azure-logo-transparent.svg) |
+| `behance` | [View SVG](https://l.habyby.net/images/social/svg/behance-logo-transparent.svg) |
+| `blogger` | [View SVG](https://l.habyby.net/images/social/svg/blogger-logo-transparent.svg) |
+| `bootstrap` | [View SVG](https://l.habyby.net/images/social/svg/bootstrap-logo-transparent.svg) |
+| `cloudflare` | [View SVG](https://l.habyby.net/images/social/svg/cloudflare-logo-transparent.svg) |
+| `discord` | [View SVG](https://l.habyby.net/images/social/svg/discord-logo-transparent.svg) |
+| `facebook` | [View SVG](https://l.habyby.net/images/social/svg/facebook-logo-transparent.svg) |
+| `figma` | [View SVG](https://l.habyby.net/images/social/svg/figma-logo-transparent.svg) |
+| `github` | [View SVG](https://l.habyby.net/images/social/svg/github-logo-transparent.svg) |
+| `gmail` | [View SVG](https://l.habyby.net/images/social/svg/gmail-logo-transparent.svg) |
+| `instagram` | [View SVG](https://l.habyby.net/images/social/svg/instagram-logo-transparent.svg) |
+| `linkedin` | [View SVG](https://l.habyby.net/images/social/svg/linkedin-logo-transparent.svg) |
+| `php` | [View SVG](https://l.habyby.net/images/social/svg/php-logo-transparent.svg) |
+| `python` | [View SVG](https://l.habyby.net/images/social/svg/python-logo-transparent.svg) |
+| `reddit` | [View SVG](https://l.habyby.net/images/social/svg/reddit-logo-transparent.svg) |
+| `shopify` | [View SVG](https://l.habyby.net/images/social/svg/shopify-logo-transparent.svg) |
+| `telegram` | [View SVG](https://l.habyby.net/images/social/svg/telegram-logo-transparent.svg) |
+| `tiktok` | [View SVG](https://l.habyby.net/images/social/svg/tiktok-logo-transparent.svg) |
+| `whatsapp` | [View SVG](https://l.habyby.net/images/social/svg/whatsapp-logo-transparent.svg) |
+| `wordpress` | [View SVG](https://l.habyby.net/images/social/svg/wordpress-logo-transparent.svg) |
+| `x` | [View SVG](https://l.habyby.net/images/social/svg/x-logo-transparent.svg) |
+| `youtube` | [View SVG](https://l.habyby.net/images/social/svg/youtube-logo-transparent.svg) |
+
+*This table is a selection of examples, not the complete 186-icon list. See the JSON endpoint for the full list.*
