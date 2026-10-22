@@ -165,44 +165,42 @@ Website: https://ihab.habyby.net/
 ---
 ## Supported Icons
 
-The Habyby Icons API currently reports **186 icons**. Replace `{icon}` with a supported icon name to request its data.
+The LHabyby Icons API currently reports **186 icons**. Replace `{icon}` with a supported icon name to request its data.
 
 **Get the complete list:** [View all supported icons in JSON](https://l.habyby.net/logo.php?format=list)
 
-**Example:** `github`
-
-| Icon Name | SVG Image |
+| Icon Name | SVG Preview |
 |---|---|
-| `500px` | [View SVG](https://l.habyby.net/images/social/svg/500px-logo-transparent.svg) |
-| `adminltr` | [View SVG](https://l.habyby.net/images/social/svg/adminltr-logo-transparent.svg) |
-| `adobe-acrobat` | [View SVG](https://l.habyby.net/images/social/svg/adobe-acrobat-logo-transparent.svg) |
-| `ajax` | [View SVG](https://l.habyby.net/images/social/svg/ajax-logo-transparent.svg) |
-| `android-studio` | [View SVG](https://l.habyby.net/images/social/svg/android-studio-logo-transparent.svg) |
-| `angular` | [View SVG](https://l.habyby.net/images/social/svg/angular-logo-transparent.svg) |
-| `appletv` | [View SVG](https://l.habyby.net/images/social/svg/appletv-logo-transparent.svg) |
-| `aspnet` | [View SVG](https://l.habyby.net/images/social/svg/aspnet-logo-transparent.svg) |
-| `aws` | [View SVG](https://l.habyby.net/images/social/svg/aws-logo-transparent.svg) |
-| `azure` | [View SVG](https://l.habyby.net/images/social/svg/azure-logo-transparent.svg) |
-| `behance` | [View SVG](https://l.habyby.net/images/social/svg/behance-logo-transparent.svg) |
-| `blogger` | [View SVG](https://l.habyby.net/images/social/svg/blogger-logo-transparent.svg) |
-| `bootstrap` | [View SVG](https://l.habyby.net/images/social/svg/bootstrap-logo-transparent.svg) |
-| `cloudflare` | [View SVG](https://l.habyby.net/images/social/svg/cloudflare-logo-transparent.svg) |
-| `discord` | [View SVG](https://l.habyby.net/images/social/svg/discord-logo-transparent.svg) |
-| `facebook` | [View SVG](https://l.habyby.net/images/social/svg/facebook-logo-transparent.svg) |
-| `figma` | [View SVG](https://l.habyby.net/images/social/svg/figma-logo-transparent.svg) |
-| `github` | [View SVG](https://l.habyby.net/images/social/svg/github-logo-transparent.svg) |
-| `gmail` | [View SVG](https://l.habyby.net/images/social/svg/gmail-logo-transparent.svg) |
-| `instagram` | [View SVG](https://l.habyby.net/images/social/svg/instagram-logo-transparent.svg) |
-| `linkedin` | [View SVG](https://l.habyby.net/images/social/svg/linkedin-logo-transparent.svg) |
-| `php` | [View SVG](https://l.habyby.net/images/social/svg/php-logo-transparent.svg) |
-| `python` | [View SVG](https://l.habyby.net/images/social/svg/python-logo-transparent.svg) |
-| `reddit` | [View SVG](https://l.habyby.net/images/social/svg/reddit-logo-transparent.svg) |
-| `shopify` | [View SVG](https://l.habyby.net/images/social/svg/shopify-logo-transparent.svg) |
-| `telegram` | [View SVG](https://l.habyby.net/images/social/svg/telegram-logo-transparent.svg) |
-| `tiktok` | [View SVG](https://l.habyby.net/images/social/svg/tiktok-logo-transparent.svg) |
-| `whatsapp` | [View SVG](https://l.habyby.net/images/social/svg/whatsapp-logo-transparent.svg) |
-| `wordpress` | [View SVG](https://l.habyby.net/images/social/svg/wordpress-logo-transparent.svg) |
-| `x` | [View SVG](https://l.habyby.net/images/social/svg/x-logo-transparent.svg) |
-| `youtube` | [View SVG](https://l.habyby.net/images/social/svg/youtube-logo-transparent.svg) |
+| `500px` | <img src="https://l.habyby.net/images/social/svg/500px-logo-transparent.svg" alt="500px" width="40" height="40"> |
+| `adminltr` | <img src="https://l.habyby.net/images/social/svg/adminltr-logo-transparent.svg" alt="AdminLTE" width="40" height="40"> |
+| `adobe-acrobat` | <img src="https://l.habyby.net/images/social/svg/adobe-acrobat-logo-transparent.svg" alt="Adobe Acrobat" width="40" height="40"> |
+| `ajax` | <img src="https://l.habyby.net/images/social/svg/ajax-logo-transparent.svg" alt="AJAX" width="40" height="40"> |
+| `android-studio` | <img src="https://l.habyby.net/images/social/svg/android-studio-logo-transparent.svg" alt="Android Studio" width="40" height="40"> |
+| `angular` | <img src="https://l.habyby.net/images/social/svg/angular-logo-transparent.svg" alt="Angular" width="40" height="40"> |
+| `appletv` | <img src="https://l.habyby.net/images/social/svg/appletv-logo-transparent.svg" alt="Apple TV" width="40" height="40"> |
+| `aspnet` | <img src="https://l.habyby.net/images/social/svg/aspnet-logo-transparent.svg" alt="ASP.NET" width="40" height="40"> |
+| `aws` | <img src="https://l.habyby.net/images/social/svg/aws-logo-transparent.svg" alt="AWS" width="40" height="40"> |
+| `azure` | <img src="https://l.habyby.net/images/social/svg/azure-logo-transparent.svg" alt="Azure" width="40" height="40"> |
+| `behance` | <img src="https://l.habyby.net/images/social/svg/behance-logo-transparent.svg" alt="Behance" width="40" height="40"> |
+| `blogger` | <img src="https://l.habyby.net/images/social/svg/blogger-logo-transparent.svg" alt="Blogger" width="40" height="40"> |
+| `bootstrap` | <img src="https://l.habyby.net/images/social/svg/bootstrap-logo-transparent.svg" alt="Bootstrap" width="40" height="40"> |
+| `cloudflare` | <img src="https://l.habyby.net/images/social/svg/cloudflare-logo-transparent.svg" alt="Cloudflare" width="40" height="40"> |
+| `discord` | <img src="https://l.habyby.net/images/social/svg/discord-logo-transparent.svg" alt="Discord" width="40" height="40"> |
+| `facebook` | <img src="https://l.habyby.net/images/social/svg/facebook-logo-transparent.svg" alt="Facebook" width="40" height="40"> |
+| `figma` | <img src="https://l.habyby.net/images/social/svg/figma-logo-transparent.svg" alt="Figma" width="40" height="40"> |
+| `github` | <img src="https://l.habyby.net/images/social/svg/github-logo-transparent.svg" alt="GitHub" width="40" height="40"> |
+| `gmail` | <img src="https://l.habyby.net/images/social/svg/gmail-logo-transparent.svg" alt="Gmail" width="40" height="40"> |
+| `instagram` | <img src="https://l.habyby.net/images/social/svg/instagram-logo-transparent.svg" alt="Instagram" width="40" height="40"> |
+| `linkedin` | <img src="https://l.habyby.net/images/social/svg/linkedin-logo-transparent.svg" alt="LinkedIn" width="40" height="40"> |
+| `php` | <img src="https://l.habyby.net/images/social/svg/php-logo-transparent.svg" alt="PHP" width="40" height="40"> |
+| `python` | <img src="https://l.habyby.net/images/social/svg/python-logo-transparent.svg" alt="Python" width="40" height="40"> |
+| `reddit` | <img src="https://l.habyby.net/images/social/svg/reddit-logo-transparent.svg" alt="Reddit" width="40" height="40"> |
+| `shopify` | <img src="https://l.habyby.net/images/social/svg/shopify-logo-transparent.svg" alt="Shopify" width="40" height="40"> |
+| `telegram` | <img src="https://l.habyby.net/images/social/svg/telegram-logo-transparent.svg" alt="Telegram" width="40" height="40"> |
+| `tiktok` | <img src="https://l.habyby.net/images/social/svg/tiktok-logo-transparent.svg" alt="TikTok" width="40" height="40"> |
+| `whatsapp` | <img src="https://l.habyby.net/images/social/svg/whatsapp-logo-transparent.svg" alt="WhatsApp" width="40" height="40"> |
+| `wordpress` | <img src="https://l.habyby.net/images/social/svg/wordpress-logo-transparent.svg" alt="WordPress" width="40" height="40"> |
+| `x` | <img src="https://l.habyby.net/images/social/svg/x-logo-transparent.svg" alt="X" width="40" height="40"> |
+| `youtube` | <img src="https://l.habyby.net/images/social/svg/youtube-logo-transparent.svg" alt="YouTube" width="40" height="40"> |
 
 *This table is a selection of examples, not the complete 186-icon list. See the JSON endpoint for the full list.*
