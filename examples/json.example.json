@@ -1,0 +1,25 @@
+{
+  "icons": [
+    {
+      "name": "github",
+      "title": "GitHub",
+      "url": "https://l.habyby.net/images/social/svg/github-logo-transparent.svg"
+    },
+    {
+      "name": "facebook",
+      "title": "Facebook",
+      "url": "https://l.habyby.net/images/social/svg/facebook-logo-transparent.svg"
+    },
+    {
+      "name": "instagram",
+      "title": "Instagram",
+      "url": "https://l.habyby.net/images/social/svg/instagram-logo-transparent.svg"
+    },
+    {
+      "name": "yahoo",
+      "title": "Yahoo",
+      "url": "https://l.habyby.net/images/social/svg/yahoo-logo-transparent.svg"
+    }
+  ],
+  "not_found": []
+}
