@@ -1,1 +1,7 @@
+# Include example source files in GitHub language statistics
+examples/** linguist-documentation=false
+examples/** linguist-vendored=false
+examples/** linguist-detectable=true
+
+# Ensure PHP files are counted
 *.php linguist-detectable=true
