@@ -5,14 +5,14 @@ A simple way for developers to access social media and technology logos through 
 Use the API in HTML, CSS, JavaScript, PHP, or JSON to retrieve and display SVG logos in your projects.
 
 <p align="center">
-  <a href="https://l.habyby.net/logo.php?name=github&format=svg">
-    <img src="https://l.habyby.net/logo.php?name=github&format=svg" alt="GitHub logo provided by LHabyby Icons API" width="90" height="90">
+  <a href="https://l.habyby.net/logo?name=github&format=svg">
+    <img src="https://l.habyby.net/logo?name=github&format=svg" alt="GitHub logo provided by LHabyby Icons API" width="90" height="90">
   </a>
 </p>
 
 <p align="center">
   <a href="https://l.habyby.net/">LHabyby Website</a> ·
-  <a href="https://l.habyby.net/logo.php">API Endpoint</a> ·
+  <a href="https://l.habyby.net/logo">API Endpoint</a> ·
   <a href="https://ihab.habyby.net/test.php">Live API Tester</a>
 </p>
 
@@ -32,7 +32,7 @@ The interactive tester demonstrates:
 ## API Endpoint
 
 ```text
-https://l.habyby.net/logo.php
+https://l.habyby.net/logo
 ```
 
 ### Single Icon Requests
@@ -40,19 +40,19 @@ https://l.habyby.net/logo.php
 **Get JSON data**
 
 ```text
-https://l.habyby.net/logo.php?name=github&format=json
+https://l.habyby.net/logo?name=github&format=json
 ```
 
 **Get the SVG image**
 
 ```text
-https://l.habyby.net/logo.php?name=github&format=svg
+https://l.habyby.net/logo?name=github&format=svg
 ```
 
 **Get the image URL**
 
 ```text
-https://l.habyby.net/logo.php?name=github&format=url
+https://l.habyby.net/logo?name=github&format=url
 ```
 
 Replace `github` with any supported icon name.
@@ -63,10 +63,10 @@ Request several icons using **one API URL**, with icon names separated by commas
 
 **Example:**
 
-[Open Multiple Icons JSON Request](https://l.habyby.net/logo.php?name=github,facebook,instagram,yahoo&format=json)
+[Open Multiple Icons JSON Request](https://l.habyby.net/logo?name=github,facebook,instagram,yahoo&format=json)
 
 ```text
-https://l.habyby.net/logo.php?name=github,facebook,instagram,yahoo&format=json
+https://l.habyby.net/logo?name=github,facebook,instagram,yahoo&format=json
 ```
 
 This requests GitHub, Facebook, Instagram, and Yahoo in a single request.
@@ -92,7 +92,7 @@ This example requests four icons and displays the returned images on your webpag
 const names = "github,facebook,instagram,yahoo";
 
 const apiUrl =
-  "https://l.habyby.net/logo.php?name=" +
+  "https://l.habyby.net/logo?name=" +
   names +
   "&format=json";
 
@@ -145,7 +145,7 @@ PHP can request the same JSON endpoint from your server and generate HTML image 
 
 $names = 'github,facebook,instagram,yahoo';
 
-$apiUrl = 'https://l.habyby.net/logo.php?name='
+$apiUrl = 'https://l.habyby.net/logo?name='
     . $names
     . '&format=json';
 
@@ -204,7 +204,7 @@ Display a single logo directly in your webpage:
 
 ```html
 <img
-  src="https://l.habyby.net/logo.php?name=github&format=svg"
+  src="https://l.habyby.net/logo?name=github&format=svg"
   alt="GitHub logo"
   width="100"
   height="100"
@@ -219,7 +219,7 @@ Use a logo as a CSS background image:
 .github-logo {
   width: 100px;
   height: 100px;
-  background-image: url("https://l.habyby.net/logo.php?name=github&format=svg");
+  background-image: url("https://l.habyby.net/logo?name=github&format=svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -238,7 +238,7 @@ Fetch the JSON response and inspect the returned data:
 
 ```javascript
 const apiUrl =
-  "https://l.habyby.net/logo.php?name=github&format=json";
+  "https://l.habyby.net/logo?name=github&format=json";
 
 fetch(apiUrl)
   .then(response => {
@@ -270,7 +270,7 @@ fetch(apiUrl)
 <?php
 
 $apiUrl =
-    'https://l.habyby.net/logo.php?name=github&format=json';
+    'https://l.habyby.net/logo?name=github&format=json';
 
 $response = file_get_contents($apiUrl);
 
@@ -300,7 +300,7 @@ This example requires `allow_url_fopen` to be enabled. You can use cURL as an al
 
 Retrieve the API's list of supported icons:
 
-[View all supported icons in JSON](https://l.habyby.net/logo.php?format=list)
+[View all supported icons in JSON](https://l.habyby.net/logo?format=list)
 
 Replace the icon name in the request URL with a supported name from the list.
 
@@ -309,17 +309,17 @@ Replace the icon name in the request URL with a supported name from the list.
 | Resource | Link |
 |---|---|
 | LHabyby Website | [l.habyby.net](https://l.habyby.net/) |
-| API Endpoint | [logo.php](https://l.habyby.net/logo.php) |
+| API Endpoint | [logo](https://l.habyby.net/logo) |
 | Interactive Tester | [Open API Tester](https://ihab.habyby.net/test.php) |
-| Supported Icons | [View JSON List](https://l.habyby.net/logo.php?format=list) |
-| Multiple Icons JSON | [Try Multiple Icons](https://l.habyby.net/logo.php?name=github,facebook,instagram,yahoo&format=json) |
+| Supported Icons | [View JSON List](https://l.habyby.net/logo?format=list) |
+| Multiple Icons JSON | [Try Multiple Icons](https://l.habyby.net/logo?name=github,facebook,instagram,yahoo&format=json) |
 | GitHub Repository | [lhabyby-icons-api](https://github.com/ehabest/lhabyby-icons-api) |
 
 ## Supported Icons
 
 The API's published icon list currently contains **186 icons**, according to the existing project documentation. The live API list is the best source for checking current availability.
 
-[**View all supported icons in JSON →**](https://l.habyby.net/logo.php?format=list)
+[**View all supported icons in JSON →**](https://l.habyby.net/logo?format=list)
 
 The API includes social media brands, developer tools, programming technologies, design tools, and other icon categories. Availability may change over time.
 
