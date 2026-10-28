@@ -3,7 +3,7 @@
  * LHabyby Icons API Tester
  * Tests: HTML, CSS, JavaScript, JSON, PHP, and multiple icons.
  */
-$apiBase = 'https://l.habyby.net/logo.php';
+$apiBase = 'https://l.habyby.net/logo';
 $defaultName = 'github';
 
 $name = strtolower(trim((string)($_GET['name'] ?? $defaultName)));
@@ -209,8 +209,8 @@ $phpExample = str_replace('API_JSON_URL', $jsonUrl, $phpExample);
         <p>Test and use social media SVG logos with HTML, CSS, JavaScript, JSON, and PHP.</p>
         <p>
             API:
-            <a href="https://l.habyby.net/logo.php" target="_blank" rel="noopener noreferrer">
-                https://l.habyby.net/logo.php
+            <a href="https://l.habyby.net/logo" target="_blank" rel="noopener noreferrer">
+                https://l.habyby.net/logo
             </a>
         </p>
     </header>
@@ -385,7 +385,7 @@ $phpExample = str_replace('API_JSON_URL', $jsonUrl, $phpExample);
         <div class="multi-icons-grid" id="multiIconsPreview"></div>
 
         <h3>API Request URL</h3>
-        <p><a id="multiIconsApiLink" href="https://l.habyby.net/logo.php?name=github,facebook,instagram&format=json" target="_blank" rel="noopener noreferrer">Open multiple-icons JSON</a></p>
+        <p><a id="multiIconsApiLink" href="https://l.habyby.net/logo?name=github,facebook,instagram&format=json" target="_blank" rel="noopener noreferrer">Open multiple-icons JSON</a></p>
 
         <h3>JSON Response</h3>
         <pre class="multi-output" id="multiIconsJson">The JSON response will appear here.</pre>
@@ -394,7 +394,7 @@ $phpExample = str_replace('API_JSON_URL', $jsonUrl, $phpExample);
         <pre><code>const names = 'github,facebook,instagram';
 
 const apiUrl =
-    'https://l.habyby.net/logo.php?name=' +
+    'https://l.habyby.net/logo?name=' +
     encodeURIComponent(names) +
     '&amp;format=json';
 
@@ -426,7 +426,7 @@ fetch(apiUrl)
         <pre><code>&lt;?php
 $names = 'github,facebook,instagram';
 
-$apiUrl = 'https://l.habyby.net/logo.php?name='
+$apiUrl = 'https://l.habyby.net/logo?name='
     . rawurlencode($names)
     . '&amp;format=json';
 
@@ -477,14 +477,14 @@ if (isset($data['icons']) &amp;&amp; is_array($data['icons'])) {
                 <?= h($htmlEndpoint) ?>
             </a>
 
-            <a href="https://l.habyby.net/logo.php?format=list" target="_blank" rel="noopener noreferrer">
+            <a href="https://l.habyby.net/logo?format=list" target="_blank" rel="noopener noreferrer">
                 <strong>List Available Icons (JSON)</strong><br>
-                https://l.habyby.net/logo.php?format=list
+                https://l.habyby.net/logo?format=list
             </a>
 
-            <a href="https://l.habyby.net/logo.php?name=github,facebook,instagram&format=json" target="_blank" rel="noopener noreferrer">
+            <a href="https://l.habyby.net/logo?name=github,facebook,instagram&format=json" target="_blank" rel="noopener noreferrer">
                 <strong>Multiple Icons (JSON)</strong><br>
-                https://l.habyby.net/logo.php?name=github,facebook,instagram&format=json
+                https://l.habyby.net/logo?name=github,facebook,instagram&format=json
             </a>
         </div>
     </section>
