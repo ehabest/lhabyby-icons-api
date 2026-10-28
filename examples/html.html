@@ -8,18 +8,30 @@
 <body>
     <h1><a href="https://l.habyby.net">LHabyby</a> Icons API</h1>
     <h2>GitHub Logo</h2>
-
+    <h3>IMAGE EXAMPLE</h3>
     <img
         src="https://l.habyby.net/logo?name=github&format=svg"
         alt="GitHub logo"
         width="64"
         height="64"
     />
-
+    <h3>LINK EXAMPLE</h3>
     <p>
         <a href="https://l.habyby.net/logo?name=github&format=svg">
             Open SVG logo
         </a>
     </p>
+    <h3>CSS EXAMPLE</h3>
+    <style>
+        .api-logo {
+    width: 64px;
+    height: 64px;
+    background-image: url("' . $svgUrl . '");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: "contain;
+    }
+    </style>
+    <span class="api-logo"></span>
 </body>
 </html>
