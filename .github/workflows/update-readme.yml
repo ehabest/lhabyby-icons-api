@@ -1,0 +1,96 @@
+name: Update README Logo Table
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs automatically once every day (Midnight UTC)
+  workflow_dispatch:      # Allows you to trigger it manually anytime from the GitHub Actions tab
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Grants the workflow permission to commit changes back to the repository
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Fetch JSON and Generate Table
+        run: |
+          python -c '
+          import urllib.request
+          import json
+
+          url = "https://l.habyby.net/logo?format=list"
+          req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+          
+          with urllib.request.urlopen(req) as response:
+              data = json.loads(response.read().decode("utf-8"))
+              icons = data.get("icons", [])
+
+          # Build HTML table matching your exact 4-column layout
+          table_lines = [
+              "<table>",
+              "  <thead>",
+              "    <tr>",
+              "      <th>Icon</th><th>Preview</th>",
+              "      <th>Icon</th><th>Preview</th>",
+              "      <th>Icon</th><th>Preview</th>",
+              "      <th>Icon</th><th>Preview</th>",
+              "    </tr>",
+              "  </thead>",
+              "  <tbody>"
+          ]
+
+          # Group icons into rows of 4 pairs
+          for i in range(0, len(icons), 4):
+              row_html = "    <tr>"
+              chunk = icons[i:i+4]
+              for icon in chunk:
+                  name = icon["name"]
+                  svg_url = icon["url"]
+                  row_html += f"<td><code>{name}</code></td><td><img src=\"{svg_url}\" width=\"30\" alt=\"{name}\"></td>"
+              
+              # Pad empty cells if the last row is incomplete
+              if len(chunk) < 4:
+                  for _ in range(4 - len(chunk)):
+                      row_html += "<td></td><td></td>"
+                      
+              row_html += "</tr>"
+              table_lines.append(row_html)
+
+          table_lines.extend([
+              "  </tbody>",
+              "</table>"
+          ])
+
+          new_table = "\n".join(table_lines)
+
+          with open("README.md", "r", encoding="utf-8") as f:
+              content = f.read()
+
+          start_marker = "<!-- LOGOS_TABLE_START -->"
+          end_marker = "<!-- LOGOS_TABLE_END -->"
+
+          if start_marker in content and end_marker in content:
+              start_idx = content.index(start_marker) + len(start_marker)
+              end_idx = content.index(end_marker)
+              updated_content = content[:start_idx] + "\n" + new_table + "\n" + content[end_idx:]
+              
+              with open("README.md", "w", encoding="utf-8") as f:
+                  f.write(updated_content)
+              print("README updated successfully.")
+          else:
+              print("Error: Markers not found in README.md!")
+              exit(1)
+          '
+
+      - name: Commit and push if README changed
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🤖 Auto-update README icon table from API"
+          branch: main
