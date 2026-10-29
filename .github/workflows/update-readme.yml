@@ -2,14 +2,14 @@ name: Update README Logo Table
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs automatically once every day (Midnight UTC)
-  workflow_dispatch:      # Allows you to trigger it manually anytime from the GitHub Actions tab
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Grants the workflow permission to commit changes back to the repository
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -24,15 +24,22 @@ jobs:
           python -c '
           import urllib.request
           import json
+          import sys
 
           url = "https://l.habyby.net/logo?format=list"
-          req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+          print(f"Fetching data from {url}...")
           
-          with urllib.request.urlopen(req) as response:
-              data = json.loads(response.read().decode("utf-8"))
-              icons = data.get("icons", [])
+          try:
+              req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+              with urllib.request.urlopen(req) as response:
+                  body = response.read().decode("utf-8")
+                  data = json.loads(body)
+                  icons = data.get("icons", [])
+              print(f"Successfully fetched {len(icons)} icons.")
+          except Exception as e:
+              print(f"Error fetching API: {e}")
+              sys.exit(1)
 
-          # Build HTML table matching your exact 4-column layout
           table_lines = [
               "<table>",
               "  <thead>",
@@ -46,7 +53,6 @@ jobs:
               "  <tbody>"
           ]
 
-          # Group icons into rows of 4 pairs
           for i in range(0, len(icons), 4):
               row_html = "    <tr>"
               chunk = icons[i:i+4]
@@ -55,7 +61,6 @@ jobs:
                   svg_url = icon["url"]
                   row_html += f"<td><code>{name}</code></td><td><img src=\"{svg_url}\" width=\"30\" alt=\"{name}\"></td>"
               
-              # Pad empty cells if the last row is incomplete
               if len(chunk) < 4:
                   for _ in range(4 - len(chunk)):
                       row_html += "<td></td><td></td>"
@@ -85,8 +90,8 @@ jobs:
                   f.write(updated_content)
               print("README updated successfully.")
           else:
-              print("Error: Markers not found in README.md!")
-              exit(1)
+              print("Error: Markers <!-- LOGOS_TABLE_START --> or <!-- LOGOS_TABLE_END --> not found in README.md!")
+              sys.exit(1)
           '
 
       - name: Commit and push if README changed
