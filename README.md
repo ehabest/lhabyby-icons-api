@@ -323,72 +323,8 @@ The API's published icon list currently contains **220 icons +**, according to t
 
 The API includes social media brands, developer tools, programming technologies, design tools, and other icon categories. Availability may change over time.
 
-<div class="lhabyby-icons-container">
-    <style>
-        .lhabyby-icons-container { font-family: Arial, sans-serif; color: #222; max-width: 1000px; margin: 0 auto; }
-        .lhabyby-icons-container table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        .lhabyby-icons-container th, 
-        .lhabyby-icons-container td { border: 1.5px solid #ddd; padding: 10px; text-align: center; }
-        .lhabyby-icons-container th { background-color: #f5f5f5; }
-        .lhabyby-icons-container img { width: 30px; height: 30px; object-fit: contain; }
-        .lhabyby-icons-container code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
-    </style>
-    <table>
-        <thead>
-            <tr>
-                <th>Icon</th>
-                <th>Preview</th>
-                <th>Icon</th>
-                <th>Preview</th>
-                <th>Icon</th>
-                <th>Preview</th>
-                <th>Icon</th>
-                <th>Preview</th>
-            </tr>
-        </thead>
-        <tbody id="icon-table-body">
-            <tr>
-                <td colspan="8" style="text-align: center;">Loading icons from API...</td>
-            </tr>
-        </tbody>
-    </table>
-    <script>
-        async function loadIconsTable() {
-            try {
-                const response = await fetch('https://l.habyby.net/logo?format=list');
-                const data = await response.json();
-                const icons = data.icons || [];
-                const tbody = document.getElementById('icon-table-body');
-                tbody.innerHTML = ''; // Clear loading message
-                let html = '';
-                // Loop through icons in chunks of 4 pairs (8 cells per row: Name, Img, Name, Img, Name, Img, Name, Img)
-                for (let i = 0; i < icons.length; i += 4) {
-                    html += '<tr>';
-                    for (let j = 0; j < 4; j++) {
-                        if (i + j < icons.length) {
-                            const icon = icons[i + j];
-                            html += `
-                                <td><code>${icon.name}</code></td>
-                                <td><img src="${icon.url}" width="30" alt="${icon.name}"></td>
-                            `;
-                        } else {
-                            // Empty cells if the row isn't completely filled
-                            html += '<td></td><td></td>';
-                        }
-                    }
-                    html += '</tr>';
-                }
-                tbody.innerHTML = html;
-            } catch (error) {
-                console.error('Failed to load icons:', error);
-                document.getElementById('icon-table-body').innerHTML = `
-                    <tr><td colspan="8" style="color: red;">Failed to load icons from API.</td></tr>
-                `;
-            }
-        }
-        loadIconsTable();
-    </script>
-</div>
+<!-- LOGOS_TABLE_START -->
+<!-- LOGOS_TABLE_END -->
 
 ## About
 
