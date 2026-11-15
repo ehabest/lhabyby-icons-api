@@ -317,7 +317,7 @@ Replace the icon name in the request URL with a supported name from the list.
 
 ## Supported Icons
 
-The API's published icon list currently contains **220 icons +**, according to the existing project documentation. The live API list is the best source for checking current availability.
+The API's published icon list currently contains **522 icons +**, according to the existing project documentation. The live API list is the best source for checking current availability.
 
 [**View all supported icons in JSON →**](https://l.habyby.net/logo?format=list)
 
