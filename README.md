@@ -213,7 +213,7 @@ Display a single logo directly in your webpage:
 
 ## CSS Example
 
-Use a logo as a CSS background image:
+A.Use a logo as a CSS background image:
 
 ```css
 .github-logo {
@@ -231,6 +231,13 @@ Add the corresponding HTML element:
 ```html
 <div class="github-logo" role="img" aria-label="GitHub logo"></div>
 ```
+B.SVG Sprite Sheet
+
+```html
+<link rel="stylesheet" href="https://l.habyby.net/assets/lh-icons.css" />
+```
+download <a href="https://l.habyby.net/assets/lh-icons.css">`css`</a> and <a href="https://l.habyby.net/assets/lh-icons-180.e7247004a4.svg">`svg`</a> and feel very to use it in your website
+<a href="https://l.habyby.net/css.php">for less sizes READ ME</a>
 
 ## JavaScript Example: Single Icon
 
