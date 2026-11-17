@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>LHabyby Icons - Lite Version</title>
+
+    <link rel="stylesheet"
+          href="https://l.habyby.net/assets/lh-icons-lite.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background: #f5f5f5;
+        }
+
+        .icon-list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+            padding: 25px;
+            background: #fff;
+            border-radius: 10px;
+        }
+
+        .icon-list span {
+            display: inline-block;
+        }
+
+        .size-180 { font-size: 180px; }
+        .size-70  { font-size: 70px; }
+        .size-35  { font-size: 35px; }
+        .size-22  { font-size: 22px; }
+
+      .note {
+          margin-top: 25px;
+          padding: 20px;
+          background: #fff3cd;
+          border-left: 4px solid #ffc107;
+          border-radius: 6px;
+          line-height: 1.7;
+      }
+      
+      .note pre {
+          padding: 12px;
+          background: #f1f1f1;
+          border-radius: 5px;
+          overflow-x: auto;
+      }
+    </style>
+</head>
+
+<body>
+
+    <h1>LHabyby Icons - Lite Version</h1>
+
+    <h2>Individual SVG Icons</h2>
+
+    <div class="icon-list">
+        <span class="lh_github size-180"></span>
+        <span class="lh_facebook size-70"></span>
+        <span class="lh_instagram size-35"></span>
+        <span class="lh_linkedin size-22"></span>
+        <span class="lh_youtube size-35"></span>
+    </div>
+
+    <h2>Same Size Example</h2>
+
+    <div class="icon-list">
+        <span class="lh_github size-70"></span>
+        <span class="lh_facebook size-70"></span>
+        <span class="lh_instagram size-70"></span>
+        <span class="lh_linkedin size-70"></span>
+        <span class="lh_youtube size-70"></span>
+    </div>
+
+    <div class="note">
+        <strong>Note:</strong>
+        The Lite version loads each SVG icon individually using
+        CSS <code>background-image: url()</code>, rather than using
+        a combined SVG Sprite Sheet.
+    
+        <p>For example, the Ableton icon is called in the CSS as:</p>
+    
+        <pre><code>.lh_ableton {
+        background-image: url("https://l.habyby.net/images/social/svg/ableton-logo-transparent.svg");
+    }</code></pre>
+    
+        Only the individual SVG icons used on your page are loaded.
+    </div>
+
+  
+</body>
+</html>
